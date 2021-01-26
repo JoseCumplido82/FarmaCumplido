@@ -3,6 +3,9 @@ package com.example.farmacumplido.controladores;
 import com.example.farmacumplido.clases.Medicamento;
 import com.example.farmacumplido.clases.Proveedor;
 import com.example.farmacumplido.tareas.TareaActualizarProveedor;
+import com.example.farmacumplido.tareas.TareaBorrarProveedor;
+import com.example.farmacumplido.tareas.TareaInsertarProveedor;
+import com.example.farmacumplido.tareas.TareaObtenerProveedores;
 
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
@@ -16,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 public class ProveedorController {
     public static boolean insertarProveedor(Proveedor p){
         FutureTask t = new FutureTask(new TareaInsertarProveedor(p));
-        ExecutorService es = Executor.newSingleThreadExecutor();
+        ExecutorService es = Executors.newSingleThreadExecutor();
         es.submit(t);
         boolean insercionOK = false;
         try {
