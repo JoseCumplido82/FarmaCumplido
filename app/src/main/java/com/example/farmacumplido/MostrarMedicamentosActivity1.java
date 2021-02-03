@@ -34,12 +34,13 @@ public class MostrarMedicamentosActivity1 extends AppCompatActivity {
         setContentView(R.layout.activity_mostrar_medicamentos);
         //-----------------------------------------------------------
         medicamentos = MedicamentoController.obtenerMedicamentos();
+        //fotosMedicamentos= FotoMedicamentoController.obtenerFotosMedicamentos();
         if(medicamentos != null) {
             //-------------------------------------------------------
             // Get a handle to the RecyclerView.
             mRecyclerView = findViewById(R.id.rv_medicamentos);
             // Create an adapter and supply the data to be displayed.
-            mAdapter = new listaMedicamentosAdapter(this, medicamentos);
+            mAdapter = new listaMedicamentosAdapter(this, medicamentos); //hay que añadir fotosMedicamentos para que se vea la nueva foto
             // Connect the adapter with the RecyclerView.
             mRecyclerView.setAdapter(mAdapter);
             // Give the RecyclerView a default layout manager.
