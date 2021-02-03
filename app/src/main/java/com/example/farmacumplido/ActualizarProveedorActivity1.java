@@ -8,12 +8,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.farmacumplido.clases.Proveedor;
 import com.example.farmacumplido.controladores.ProveedorController;
 
 import java.util.ArrayList;
 
-public class ActualizarProveedorActivity1 {
+public class ActualizarProveedorActivity1 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
 
     public static final String EXTRA_OBJETO_PROVEEDOR = "objetoProveedor" ;

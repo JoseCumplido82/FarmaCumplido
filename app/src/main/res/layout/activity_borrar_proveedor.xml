@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_borrar_proveedor"
+        android:layout_width="211dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/borrar_proveedor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/sp_borrarp"
+        android:layout_width="318dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_borrar_proveedor"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="@+id/txt_borrar_proveedor"
+        app:layout_constraintTop_toBottomOf="@+id/txt_borrar_proveedor" />
+
+    <Button
+        android:id="@+id/bt_borrarproveedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:onClick="borrarProveedor"
+        android:text="@string/borrar_proveedor2"
+        app:layout_constraintEnd_toEndOf="@+id/sp_borrarp"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/sp_borrarp"
+        app:layout_constraintTop_toBottomOf="@+id/sp_borrarp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

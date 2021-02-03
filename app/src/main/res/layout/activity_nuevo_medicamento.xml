@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_nuevo_mediamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/nuevo_medicamento"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_guardarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="@string/guardar_medicamento"
+        app:layout_constraintEnd_toEndOf="@+id/sp_nuevom_proveedor"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/sp_nuevom_proveedor"
+        app:layout_constraintTop_toBottomOf="@+id/sp_nuevom_proveedor" />
+
+    <Spinner
+        android:id="@+id/sp_nuevom_proveedor"
+        android:layout_width="181dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/edt_nuevom_precio"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/edt_nuevom_precio"
+        app:layout_constraintTop_toBottomOf="@+id/edt_nuevom_precio" />
+
+    <EditText
+        android:id="@+id/edt_nuevom_precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="@string/preciomedicamento"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/edt_nuevom_nombre"
+        app:layout_constraintStart_toStartOf="@+id/edt_nuevom_nombre"
+        app:layout_constraintTop_toBottomOf="@+id/edt_nuevom_nombre"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/edt_nuevom_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:ems="10"
+        android:onClick="insertarMedicamento"
+        android:hint="@string/nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txt_nuevo_mediamento"
+        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintStart_toStartOf="@+id/txt_nuevo_mediamento"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nuevo_mediamento"
+        android:autofillHints="" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,4 +28,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ActualizarProveedorActivity1.class);
         startActivity(intent);
     }
+
+    public void mostrar_medicamentos(View view) {
+        Intent intent = new Intent(this, MostrarMedicamentosActivity1.class);
+        startActivity(intent);
+    }
 }

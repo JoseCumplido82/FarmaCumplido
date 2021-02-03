@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:onClick="nuevoProveedor"
-        android:text="nuevo proveedor"
+        android:text="@string/nuevo_proveedor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:text="borrar Proveedor"
+        android:text="@string/borrar_proveedo"
         android:onClick="borrarProveedor"
         app:layout_constraintEnd_toEndOf="@+id/bt_insertarp"
         app:layout_constraintHorizontal_bias="0.0"
@@ -34,11 +34,23 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
-        android:text="Actualizar proveedor"
+        android:text="@string/actualizar_proveedo"
         android:onClick="actualizar_proveedor1"
         app:layout_constraintEnd_toEndOf="@+id/bt_borrarp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/bt_borrarp"
         app:layout_constraintTop_toBottomOf="@+id/bt_borrarp" />
+
+    <Button
+        android:id="@+id/bt_mostrarMedicamentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:onClick="mostrar_medicamentos"
+        android:text="@string/mostrar_medicamentos"
+        app:layout_constraintEnd_toEndOf="@+id/bt_actualizarp"
+        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintStart_toStartOf="@+id/bt_actualizarp"
+        app:layout_constraintTop_toBottomOf="@+id/bt_actualizarp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

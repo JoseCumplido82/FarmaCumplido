@@ -1,6 +1,8 @@
 package com.example.farmacumplido.clases;
 
-public class Medicamento {
+import java.io.Serializable;
+
+public class Medicamento implements Serializable {
     private int idmedicamento;
     private String nombre;
     private double precio;
