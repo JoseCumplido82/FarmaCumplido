@@ -18,6 +18,7 @@ public class MedicamentoDB {
         Connection conexion = BaseDB.conectarConBaseDeDatos();
         if(conexion == null)
         {
+            System.out.println("no se ha podido conectar con la base datos");
             return null;
         }
         ArrayList<Medicamento> medicamentosDevueltos = new ArrayList<Medicamento>();
@@ -27,10 +28,11 @@ public class MedicamentoDB {
             ResultSet resultado = sentencia.executeQuery(ordenSQL);
             while(resultado.next())
             {
-                int idmedicamento = resultado.getInt("idmedicamento");
+                System.out.println("llega al resultset");
+                int idmedicamento= resultado.getInt("idmedicamento");
                 String nombre = resultado.getString("nombre");
-                double precio = resultado.getInt("precio");
-                int idproveedor = resultado.getInt("idproveedor");
+                double precio= resultado.getDouble("precio");
+                int idproveedor= resultado.getInt("idproveedor");
                 Medicamento m = new Medicamento(idmedicamento, nombre, precio, idproveedor);
                 medicamentosDevueltos.add(m);
             }
@@ -53,7 +55,7 @@ public class MedicamentoDB {
         }
         //----------------------------
         try {
-            String ordensql = "INSERT INTO medicamento (nombre, precio,idproveedor) VALUES (?, ?, ?);";
+            String ordensql = "INSERT INTO medicamento (nombre, precio, idproveedor) VALUES (?, ?, ?);";
             PreparedStatement pst = conexion.prepareStatement(ordensql);
             pst.setString(1, m.getNombre());
             pst.setDouble(2,  m.getPrecio());
@@ -149,7 +151,7 @@ public class MedicamentoDB {
             {
                 int idmedicamento = resultadosql.getInt("idmedicamento");
                 String nombremedicamento = resultadosql.getString("nombre");
-                double precio = resultadosql.getInt("precio");
+                double precio = resultadosql.getDouble("precio");
                 int idproveedor = resultadosql.getInt("idproveedor");
                 medicamentoEncontrado = new Medicamento(idmedicamento,nombremedicamento, precio, idproveedor);
             }

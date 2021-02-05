@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -24,7 +25,7 @@ import java.util.Collections;
 public class MostrarMedicamentosActivity1 extends AppCompatActivity {
 
     private static final int PETICION1 = 1;
-    private RecyclerView mRecyclerView;
+    private RecyclerView rv_medicamentos;
     private listaMedicamentosAdapter mAdapter;
     private ArrayList<Medicamento> medicamentos;
 
@@ -38,13 +39,16 @@ public class MostrarMedicamentosActivity1 extends AppCompatActivity {
         if(medicamentos != null) {
             //-------------------------------------------------------
             // Get a handle to the RecyclerView.
-            mRecyclerView = findViewById(R.id.rv_medicamentos);
+            rv_medicamentos = (RecyclerView) findViewById(R.id.rv_medicamentos);
             // Create an adapter and supply the data to be displayed.
             mAdapter = new listaMedicamentosAdapter(this, medicamentos); //hay que añadir fotosMedicamentos para que se vea la nueva foto
             // Connect the adapter with the RecyclerView.
-            mRecyclerView.setAdapter(mAdapter);
+            rv_medicamentos.setAdapter(mAdapter);
             // Give the RecyclerView a default layout manager.
-            mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+            rv_medicamentos.setLayoutManager(new LinearLayoutManager(this));
+        }
+        else{
+            Log.i("medicamentos", "no pude recuperar los medicamentos");
         }
         //------------------------------------------------------------
         ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT |
@@ -76,7 +80,7 @@ public class MostrarMedicamentosActivity1 extends AppCompatActivity {
                 }
             }
         });
-        helper.attachToRecyclerView(mRecyclerView);
+        helper.attachToRecyclerView(rv_medicamentos);
     }
 
     private void mostrarToast(String texto) {
@@ -91,9 +95,9 @@ public class MostrarMedicamentosActivity1 extends AppCompatActivity {
                 Medicamento c = (Medicamento) data.getSerializableExtra(NuevoMedicamentosActivity.EXTRA_OBJETO_MEDICAMENTO);
                 medicamentos.add(c);
                 // Notify the adapter, that the data has changed.
-                mRecyclerView.getAdapter().notifyItemInserted(medicamentos.size());
+                rv_medicamentos.getAdapter().notifyItemInserted(medicamentos.size());
                 // Scroll to the bottom.
-                mRecyclerView.smoothScrollToPosition(medicamentos.size());
+                rv_medicamentos.smoothScrollToPosition(medicamentos.size());
             }
         }
     }
@@ -107,7 +111,7 @@ public class MostrarMedicamentosActivity1 extends AppCompatActivity {
         medicamentos = MedicamentoController.obtenerMedicamentos();
         if(medicamentos != null) {
             mAdapter.setListaMedicamentos(medicamentos);
-            mRecyclerView.getAdapter().notifyDataSetChanged();
+            rv_medicamentos.getAdapter().notifyDataSetChanged();
         }
     }
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4CAF50"
     tools:context=".MainActivity">
 
     <Button
@@ -22,8 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:text="@string/borrar_proveedo"
         android:onClick="borrarProveedor"
+        android:text="@string/borrar_proveedo"
         app:layout_constraintEnd_toEndOf="@+id/bt_insertarp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/bt_insertarp"
@@ -34,8 +35,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
-        android:text="@string/actualizar_proveedo"
         android:onClick="actualizar_proveedor1"
+        android:text="@string/actualizar_proveedo"
         app:layout_constraintEnd_toEndOf="@+id/bt_borrarp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/bt_borrarp"

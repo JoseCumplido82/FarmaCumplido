@@ -22,6 +22,7 @@
         android:layout_height="32dp"
         android:layout_marginTop="36dp"
         android:text="@string/lista_de_medicamentos"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"

@@ -50,7 +50,7 @@ public class ProveedorDB {
         //---------------------------------
         Proveedor proveedorEncontrado = null;
         try {
-            ResultSet resultadosql = BaseDB.buscarFilasEnTabla(conexion, "proveedor", "nombreproveedor", nombre);
+            ResultSet resultadosql = BaseDB.buscarFilasEnTabla(conexion, "proveedor", "nombreProveedor", nombre);
             //------------------------------------------------
             if(resultadosql == null)
             {
@@ -59,7 +59,7 @@ public class ProveedorDB {
             while(resultadosql.next())
             {
                 int idproveedor = resultadosql.getInt("idproveedor");
-                String nombreproveedor = resultadosql.getString("nombreproveedor");
+                String nombreproveedor = resultadosql.getString("nombreProveedor");
                 proveedorEncontrado = new Proveedor(idproveedor,nombreproveedor);
             }
             resultadosql.close();
@@ -84,7 +84,7 @@ public class ProveedorDB {
             while(resultado.next())
             {
                 int idproveedor = resultado.getInt("idproveedor");
-                String nombreproveedor = resultado.getString("nombreproveedor");
+                String nombreproveedor = resultado.getString("nombreProveedor");
                 Proveedor p = new Proveedor(idproveedor, nombreproveedor);
                 proveedorDevuelto.add(p);
             }
@@ -106,7 +106,7 @@ public class ProveedorDB {
         }
         //----------------------------
         try {
-            String ordensql = "DELETE FROM proveedor WHERE nombreproveedor LIKE ?;";
+            String ordensql = "DELETE FROM proveedor WHERE nombreProveedor LIKE ?;";
             PreparedStatement pst = conexion.prepareStatement(ordensql);
             pst.setString(1, p.getNombreProveedor());
             int filasAfectadas = pst.executeUpdate();
@@ -132,7 +132,7 @@ public class ProveedorDB {
         }
         //----------------------------
         try {
-            String ordensql = "UPDATE proveedor SET nombreproveedor = ? WHERE idproveedor = ?";
+            String ordensql = "UPDATE proveedor SET nombreProveedor = ? WHERE idproveedor = ?";
             PreparedStatement pst = conexion.prepareStatement(ordensql);
             pst.setString(1, p.getNombreProveedor());
             pst.setInt(2, p.getIdproveedor());

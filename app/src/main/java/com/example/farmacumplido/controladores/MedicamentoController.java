@@ -57,7 +57,7 @@ public class MedicamentoController {
             } catch (InterruptedException e) {
                 es.shutdownNow();
             }
-            String texto_medicamentos ="MEDICAMENTOS \n";
+            String texto_medicamentos ="medicamento \n";
             if(medicamentosDevueltos != null) {
                 for (Medicamento c : medicamentosDevueltos) {
                     texto_medicamentos += c.toString() + "\n";
