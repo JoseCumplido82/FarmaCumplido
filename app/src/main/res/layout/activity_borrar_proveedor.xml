@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#58709F">
 
     <TextView
         android:id="@+id/txt_borrar_proveedor"
-        android:layout_width="211dp"
-        android:layout_height="39dp"
+        android:layout_width="311dp"
+        android:layout_height="66dp"
         android:layout_marginTop="52dp"
+        android:gravity="center"
         android:text="@string/borrar_proveedor"
+        android:textColor="#FFC107"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +38,7 @@
         android:layout_marginTop="152dp"
         android:onClick="borrarProveedor2"
         android:text="@string/borrar_proveedor2"
+        app:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toEndOf="@+id/sp_borrarp"
         app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="@+id/sp_borrarp"

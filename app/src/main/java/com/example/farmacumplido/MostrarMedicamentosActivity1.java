@@ -36,7 +36,9 @@ public class MostrarMedicamentosActivity1 extends AppCompatActivity {
         //-----------------------------------------------------------
         medicamentos = MedicamentoController.obtenerMedicamentos();
         //fotosMedicamentos= FotoMedicamentoController.obtenerFotosMedicamentos();
+        //System.out.println(medicamentos.size());
         if(medicamentos != null) {
+
             //-------------------------------------------------------
             // Get a handle to the RecyclerView.
             rv_medicamentos = (RecyclerView) findViewById(R.id.rv_medicamentos);

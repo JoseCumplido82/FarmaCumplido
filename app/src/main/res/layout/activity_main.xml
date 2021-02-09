@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#445DDC"
+    android:background="#58709F"
     tools:context=".MainActivity">
 
     <Button
@@ -72,5 +72,19 @@
         app:layout_constraintStart_toStartOf="@+id/bt_mostrarMedicamentos"
         app:layout_constraintTop_toBottomOf="@+id/bt_mostrarMedicamentos"
         app:srcCompat="@drawable/farmaandroid" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="208dp"
+        android:layout_height="39dp"
+        android:gravity="center"
+        android:text="FarmaCumplido"
+        android:textColor="#FFC107"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

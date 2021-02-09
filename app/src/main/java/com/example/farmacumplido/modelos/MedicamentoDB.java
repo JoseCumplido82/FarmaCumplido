@@ -31,8 +31,11 @@ public class MedicamentoDB {
 
                 System.out.println("llega al resultado del while pero no coge los atributos del medicamento");
                 int idmedicamento= resultado.getInt("idmedicamento");
+
                 String nombre = resultado.getString("nombre");
+
                 double precio= resultado.getDouble("precio");
+
                 int idproveedor= resultado.getInt("idproveedor");
                 Medicamento m = new Medicamento(idmedicamento, nombre, precio, idproveedor);
                 medicamentosDevueltos.add(m);

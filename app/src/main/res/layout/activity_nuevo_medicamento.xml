@@ -3,15 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#58709F">
 
     <TextView
         android:id="@+id/txt_nuevo_mediamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:gravity="center"
         android:text="@string/nuevo_medicamento"
+        android:textColor="#FFC107"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:text="@string/guardar_medicamento"
+        app:backgroundTint="#8BC34A"
         app:layout_constraintEnd_toEndOf="@+id/sp_nuevom_proveedor"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="@+id/sp_nuevom_proveedor"
@@ -43,27 +48,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/preciomedicamento"
         android:inputType="numberDecimal"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/edt_nuevom_nombre"
         app:layout_constraintStart_toStartOf="@+id/edt_nuevom_nombre"
-        app:layout_constraintTop_toBottomOf="@+id/edt_nuevom_nombre"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_nuevom_nombre" />
 
     <EditText
         android:id="@+id/edt_nuevom_nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
+        android:autofillHints=""
         android:ems="10"
-        android:onClick="insertarMedicamento"
         android:hint="@string/nombre"
         android:inputType="textPersonName"
+        android:onClick="insertarMedicamento"
         app:layout_constraintEnd_toEndOf="@+id/txt_nuevo_mediamento"
         app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="@+id/txt_nuevo_mediamento"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nuevo_mediamento"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_nuevo_mediamento" />
 </androidx.constraintlayout.widget.ConstraintLayout>
