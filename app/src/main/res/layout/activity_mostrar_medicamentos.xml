@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#58709F">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_medicamentos"
@@ -21,8 +21,11 @@
         android:layout_width="284dp"
         android:layout_height="32dp"
         android:layout_marginTop="36dp"
+        android:gravity="center"
         android:text="@string/lista_de_medicamentos"
+        android:textColor="#FFC107"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,11 +49,11 @@
         android:layout_width="127dp"
         android:layout_height="143dp"
         android:layout_marginTop="68dp"
+        android:contentDescription="@string/todo"
         android:onClick="refrescarMedicamentos"
         app:layout_constraintEnd_toEndOf="@+id/rv_medicamentos"
         app:layout_constraintHorizontal_bias="0.315"
         app:layout_constraintStart_toEndOf="@+id/img_añadir"
         app:layout_constraintTop_toBottomOf="@+id/rv_medicamentos"
-        app:srcCompat="@drawable/refrescar"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/refrescar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

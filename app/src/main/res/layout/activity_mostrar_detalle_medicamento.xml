@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#6B7CA6">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="180dp"
         android:layout_height="148dp"
         android:layout_marginTop="80dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/medicamentoimagen"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/medicamentoimagen" />
 
     <TextView
         android:id="@+id/txt_detalle_nombrem"
         android:layout_width="319dp"
         android:layout_height="51dp"
         android:layout_marginTop="56dp"
+        android:gravity="center"
         android:text="@string/nombre_medicamentod"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
@@ -34,6 +35,7 @@
         android:layout_width="317dp"
         android:layout_height="43dp"
         android:layout_marginTop="32dp"
+        android:gravity="center"
         android:text="@string/precio_medicamento"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/txt_detalle_nombrem"
@@ -46,10 +48,25 @@
         android:layout_width="320dp"
         android:layout_height="46dp"
         android:layout_marginTop="40dp"
+        android:gravity="center"
         android:text="@string/id_proveedor_medicamento"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/txt_detalle_precio"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txt_detalle_precio"
         app:layout_constraintTop_toBottomOf="@+id/txt_detalle_precio" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="365dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/detalle_del_medicamento"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

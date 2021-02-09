@@ -32,15 +32,11 @@ public class MedicamentoViewHolder extends RecyclerView.ViewHolder implements Vi
     @Override
     public void onClick(View v) {
         // Get the position of the item that was clicked.
-        Log.i("medicamentos", "al hacer click muestro la casilla");
         int mPosition = getLayoutPosition();
         // Use that to access the affected item in mWordList.
         Medicamento medicamento = this.lcAdapter.getListaMedicamentos().get(mPosition);
         // Change the word in the mWordList.
-        // Log.i("ciudad","has seleccionado: " + ciudad.toString());
-        //  Toast.makeText(lcAdapter.getC(), "has seleccionado: " + ciudad.toString(),Toast.LENGTH_SHORT).show();
-        // Notify the adapter, that the data has changed so it can
-        // update the RecyclerView to display the data.
+        Log.i("medicamento","has seleccionado: " + medicamento.toString());
         lcAdapter.notifyDataSetChanged();
         Intent intent = new Intent(lcAdapter.getC(), MostrarDetalleMedicamentoctivity.class);
         intent.putExtra(EXTRA_OBJETO_MEDICAMENTO, medicamento);

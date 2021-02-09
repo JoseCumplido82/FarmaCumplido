@@ -24,11 +24,12 @@ public class MedicamentoDB {
         ArrayList<Medicamento> medicamentosDevueltos = new ArrayList<Medicamento>();
         try {
             Statement sentencia = conexion.createStatement();
-            String ordenSQL = "select * from medicamento";
+            String ordenSQL = "SELECT * from medicamento";
             ResultSet resultado = sentencia.executeQuery(ordenSQL);
             while(resultado.next())
             {
-                System.out.println("llega al resultset");
+
+                System.out.println("llega al resultado del while pero no coge los atributos del medicamento");
                 int idmedicamento= resultado.getInt("idmedicamento");
                 String nombre = resultado.getString("nombre");
                 double precio= resultado.getDouble("precio");

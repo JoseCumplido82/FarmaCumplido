@@ -24,6 +24,14 @@ public class listaMedicamentosAdapter extends RecyclerView.Adapter<MedicamentoVi
         mInflater = LayoutInflater.from(c);
     }
 
+    public LayoutInflater getmInflater() {
+        return mInflater;
+    }
+
+    public void setmInflater(LayoutInflater mInflater) {
+        this.mInflater = mInflater;
+    }
+
     @NonNull
     @Override
     public MedicamentoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -34,7 +42,7 @@ public class listaMedicamentosAdapter extends RecyclerView.Adapter<MedicamentoVi
     @Override
     public void onBindViewHolder(@NonNull MedicamentoViewHolder holder, int position) {
         Medicamento medicamentoActual = listaMedicamentos.get(position);
-        holder.txt_nombrem.setText("Medicamento: " + medicamentoActual.getNombre());
+        holder.txt_nombrem.setText("medicamento: " + medicamentoActual.getNombre());
         holder.txt_preciom.setText(String.valueOf("precio: " + medicamentoActual.getPrecio()));
         holder.txt_proveedorm.setText(String.valueOf("idproveedor: " + medicamentoActual.getIdproveedor()));
     }

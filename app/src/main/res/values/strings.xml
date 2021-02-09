@@ -29,4 +29,6 @@
     <string name="nuevo_proveedorn">NUEVO PROVEEDOR</string>
     <string name="nombrepro">NOMBRE</string>
     <string name="guardar_proveedor">guardar proveedor</string>
+    <string name="detalle_del_medicamento">DETALLE DEL MEDICAMENTO</string>
+    <string name="todo2">TODO</string>
 </resources>

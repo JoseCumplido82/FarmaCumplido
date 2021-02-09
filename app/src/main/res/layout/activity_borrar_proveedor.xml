@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="152dp"
-        android:onClick="borrarProveedor"
+        android:onClick="borrarProveedor2"
         android:text="@string/borrar_proveedor2"
         app:layout_constraintEnd_toEndOf="@+id/sp_borrarp"
         app:layout_constraintHorizontal_bias="0.511"

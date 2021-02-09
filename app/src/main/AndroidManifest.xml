@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmaCumplido">
-        <activity android:name=".MostrarDetalleMedicamentoctivity"></activity>
+        <activity android:name=".MostrarDetalleMedicamentoctivity"/>
         <activity android:name=".NuevoMedicamentosActivity" />
         <activity android:name=".MostrarMedicamentosActivity1" />
         <activity android:name=".ActualizarProveedorActivity2" />

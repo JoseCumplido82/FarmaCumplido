@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4CAF50"
+    android:background="#445DDC"
     tools:context=".MainActivity">
 
     <Button
@@ -12,8 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
+        android:background="#4CAF50"
         android:onClick="nuevoProveedor"
         android:text="@string/nuevo_proveedor"
+        app:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,11 +24,12 @@
         android:id="@+id/bt_borrarp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="24dp"
+        android:background="#4CAF50"
         android:onClick="borrarProveedor"
         android:text="@string/borrar_proveedo"
+        app:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toEndOf="@+id/bt_insertarp"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/bt_insertarp"
         app:layout_constraintTop_toBottomOf="@+id/bt_insertarp" />
 
@@ -34,9 +37,11 @@
         android:id="@+id/bt_actualizarp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="24dp"
+        android:background="#4CAF50"
         android:onClick="actualizar_proveedor1"
         android:text="@string/actualizar_proveedo"
+        app:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toEndOf="@+id/bt_borrarp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/bt_borrarp"
@@ -46,12 +51,26 @@
         android:id="@+id/bt_mostrarMedicamentos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="28dp"
+        android:background="#4CAF50"
         android:onClick="mostrar_medicamentos"
         android:text="@string/mostrar_medicamentos"
+        app:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toEndOf="@+id/bt_actualizarp"
-        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="@+id/bt_actualizarp"
         app:layout_constraintTop_toBottomOf="@+id/bt_actualizarp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="156dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="84dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="@+id/bt_mostrarMedicamentos"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="@+id/bt_mostrarMedicamentos"
+        app:layout_constraintTop_toBottomOf="@+id/bt_mostrarMedicamentos"
+        app:srcCompat="@drawable/farmaandroid" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
