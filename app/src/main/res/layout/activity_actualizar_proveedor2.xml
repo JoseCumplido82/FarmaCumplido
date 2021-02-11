@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_actualizar_proveedor2" />
 
     <EditText
-        android:id="@+id/edt_actualizarid2"
+        android:id="@+id/edt_actualizar_idp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edt_actualizarid" />
 
     <EditText
-        android:id="@+id/edt_actualizarnombre2"
+        android:id="@+id/edt_actualizar_nombrep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
@@ -78,21 +78,21 @@
         android:hint="@string/nombre_proveedor"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/edt_actualizarid2"
+        app:layout_constraintEnd_toEndOf="@+id/edt_actualizar_idp"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/edt_actualizarid2"
-        app:layout_constraintTop_toBottomOf="@+id/edt_actualizarid2" />
+        app:layout_constraintStart_toStartOf="@+id/edt_actualizar_idp"
+        app:layout_constraintTop_toBottomOf="@+id/edt_actualizar_idp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_actualizarp2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="196dp"
         android:onClick="actualizarProveedor"
         android:text="@string/actualizar_proveedor2"
         app:backgroundTint="#8BC34A"
-        app:layout_constraintEnd_toEndOf="@+id/edt_actualizarnombre2"
+        app:layout_constraintEnd_toEndOf="@+id/edt_actualizar_nombrep"
         app:layout_constraintHorizontal_bias="0.141"
         app:layout_constraintStart_toEndOf="@+id/edt_actualizarnombre"
-        app:layout_constraintTop_toBottomOf="@+id/edt_actualizarnombre2" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_actualizar_nombrep" />
 </androidx.constraintlayout.widget.ConstraintLayout>

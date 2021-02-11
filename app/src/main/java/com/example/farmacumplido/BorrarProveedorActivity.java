@@ -42,7 +42,7 @@ public class BorrarProveedorActivity extends AppCompatActivity implements Adapte
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
     }
 
-    public void borrarProveedor2(View view) {
+    public void borrarProveedor(View view) {
         AlertDialog.Builder alerta1 = new AlertDialog.Builder(this);
         alerta1.setTitle("borrar el proveedor?");
         //alerta1.setMessage(" no -> cancelar, si-> guardar");
@@ -54,9 +54,9 @@ public class BorrarProveedorActivity extends AppCompatActivity implements Adapte
                     mostrarToast("selecciona un proveedor");
                     return;
                 }
-                //borrar provincia
+                //borrar proveedor
                 boolean borradoOK = ProveedorController.borrarProveedor(pseleccionado);
-
+                // recargar combo (o desde la base de datos volver a solicitar todo, o quitar solamente el item borrado)
                 if(borradoOK)
                 {
                     mostrarToast("proveedor borrado correctamente");

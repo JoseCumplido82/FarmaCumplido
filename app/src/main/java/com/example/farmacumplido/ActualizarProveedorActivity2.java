@@ -25,8 +25,8 @@ public class  ActualizarProveedorActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actualizar_proveedor2);
-        edt_actualizar_ipd = (EditText) findViewById(R.id.edt_actualizarid2);
-        edt_actualizar_nombrep = (EditText) findViewById(R.id.edt_actualizarnombre2);
+        edt_actualizar_ipd = (EditText) findViewById(R.id.edt_actualizar_idp);
+        edt_actualizar_nombrep = (EditText) findViewById(R.id.edt_actualizar_nombrep);
         Intent intent = getIntent();
         if(intent != null)
         {

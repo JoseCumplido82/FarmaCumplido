@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#6B7CA6"
+    app:cardBackgroundColor="#6B7CA6">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -14,8 +16,8 @@
             android:layout_width="103dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/medicamentoimagen"
-            android:contentDescription="@string/todo" />
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/medicamentoimagen" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -32,13 +34,13 @@
 
             <TextView
                 android:id="@+id/txt_preciom"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/precio" />
 
             <TextView
                 android:id="@+id/txt_proveedorm"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/proveedor" />
         </LinearLayout>

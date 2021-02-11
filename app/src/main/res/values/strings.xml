@@ -9,7 +9,7 @@
     <string name="actualizar_proveedor2">actualizar proveedor</string>
     <string name="borrar_proveedor">BORRAR PROVEEDOR</string>
     <string name="borrar_proveedor2">borrar proveedor</string>
-    <string name="item_proveedor">item proveedor</string>
+    <string name="item_proveedor2">item proveedor</string>
     <string name="lista_de_medicamentos">LISTA DE MEDICAMENTOS</string>
     <string name="todo">TODO</string>
     <string name="precio">Precio:</string>
@@ -31,4 +31,5 @@
     <string name="guardar_proveedor">guardar proveedor</string>
     <string name="detalle_del_medicamento">DETALLE DEL MEDICAMENTO</string>
     <string name="todo2">TODO</string>
+    <string name="item_proveedor">item proveedor</string>
 </resources>

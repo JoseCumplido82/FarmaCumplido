@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void actualizar_proveedor1(View view) {
+    public void actualizarProveedor(View view) {
         Intent intent = new Intent(this, ActualizarProveedorActivity1.class);
         startActivity(intent);
     }

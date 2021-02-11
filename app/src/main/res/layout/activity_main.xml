@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:background="#4CAF50"
-        android:onClick="actualizar_proveedor1"
+        android:onClick="actualizarProveedor"
         android:text="@string/actualizar_proveedo"
         app:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toEndOf="@+id/bt_borrarp"

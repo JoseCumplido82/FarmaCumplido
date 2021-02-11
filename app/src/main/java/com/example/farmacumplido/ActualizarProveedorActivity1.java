@@ -22,47 +22,46 @@ public class ActualizarProveedorActivity1 extends AppCompatActivity implements A
     Spinner sp_actualizarp =null;
     ArrayList<Proveedor> proveedores =null;
     public static ArrayAdapter<Proveedor> adapter =null;
-    Proveedor pseleccionado=null;
+    static Proveedor pseleccionado=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actualizar_proveedor1);
         sp_actualizarp = (Spinner) findViewById(R.id.sp_actualizarp);
-        //------------------------------
-        proveedores = ProveedorController.obtenerProveedores();
-        sp_actualizarp.setOnItemSelectedListener(this);
-        // creamos el adaptador
-        if(proveedores!=null) {
-            adapter = new ArrayAdapter<Proveedor>(this, R.layout.support_simple_spinner_dropdown_item, proveedores);
-            sp_actualizarp.setAdapter(adapter);
+        if(sp_actualizarp!=null){
+            sp_actualizarp.setOnItemSelectedListener(this);
+            proveedores=ProveedorController.obtenerProveedores();
+            for(Proveedor p : proveedores){
+                System.out.println(p.toString());
+            }
+           if(proveedores!=null){
+                adapter = new ArrayAdapter<Proveedor>(this, R.layout.item_proveedor, proveedores);
+              sp_actualizarp.setAdapter(adapter);
+           }
         }
 
     }
+
+    public void siguienteactualizarProveedor(View view) {
+        Intent intent = new Intent(this, ActualizarProveedorActivity2.class);
+        intent.putExtra(EXTRA_OBJETO_PROVEEDOR, pseleccionado);
+        startActivity(intent);
+    }
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        if(proveedores!=null){
-            pseleccionado = (Proveedor) sp_actualizarp.getItemAtPosition(position);
-            Toast.makeText(this, "has elegido el proveedor " + pseleccionado.toString(), Toast.LENGTH_SHORT).show();
+        Proveedor p = (Proveedor) sp_actualizarp.getItemAtPosition(position);
+        pseleccionado = p;
         }
 
-    }
+
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
 
-    public void enviarProveedorActivity2(View view){
-        if(pseleccionado == null){
-            Toast.makeText(this, "debes seleccionar un proveedor", Toast.LENGTH_SHORT).show();
-            return;
-        }else{
-            //si llego aqui tengo provincia
-            Intent intent = new Intent(this, ActualizarProveedorActivity2.class);
-            intent.putExtra(EXTRA_OBJETO_PROVEEDOR, pseleccionado);
-            startActivity(intent);
-        }
-    }
+
 }
