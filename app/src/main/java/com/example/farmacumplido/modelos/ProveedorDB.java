@@ -1,9 +1,12 @@
 package com.example.farmacumplido.modelos;
 
+import android.graphics.Bitmap;
 import android.util.Log;
 
+import com.example.farmacumplido.Utilidades.ImagenesBlobBitmap;
 import com.example.farmacumplido.clases.Proveedor;
 
+import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -60,7 +63,8 @@ public class ProveedorDB {
             {
                 int idproveedor = resultadosql.getInt("idproveedor");
                 String nombreproveedor = resultadosql.getString("nombreProveedor");
-                proveedorEncontrado = new Proveedor(idproveedor,nombreproveedor);
+                Blob foto = resultadosql.getBlob("foto");
+                Bitmap fotobm = ImagenesBlobBitmap.blob_to_bitmap(foto, ImagenesBlobBitmap.ancho, ImagenesBlobBitmap.alto);
             }
             resultadosql.close();
             conexion.close();
@@ -85,7 +89,9 @@ public class ProveedorDB {
             {
                 int idproveedor = resultado.getInt("idproveedor");
                 String nombreproveedor = resultado.getString("nombreProveedor");
-                Proveedor p = new Proveedor(idproveedor, nombreproveedor);
+                Blob foto = resultado.getBlob("foto");
+                Bitmap fotobm = ImagenesBlobBitmap.blob_to_bitmap(foto, ImagenesBlobBitmap.ancho, ImagenesBlobBitmap.alto);
+                Proveedor p = new Proveedor(idproveedor, nombreproveedor, fotobm);
                 proveedorDevuelto.add(p);
             }
             resultado.close();

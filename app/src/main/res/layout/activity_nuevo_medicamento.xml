@@ -25,21 +25,22 @@
         android:id="@+id/bt_guardarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="72dp"
         android:text="@string/guardar_medicamento"
         app:backgroundTint="#8BC34A"
+        android:onClick="insertarMedicamento"
         app:layout_constraintEnd_toEndOf="@+id/sp_nuevom_proveedor"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="@+id/sp_nuevom_proveedor"
         app:layout_constraintTop_toBottomOf="@+id/sp_nuevom_proveedor" />
 
     <Spinner
         android:id="@+id/sp_nuevom_proveedor"
-        android:layout_width="181dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="272dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="96dp"
         app:layout_constraintEnd_toEndOf="@+id/edt_nuevom_precio"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/edt_nuevom_precio"
         app:layout_constraintTop_toBottomOf="@+id/edt_nuevom_precio" />
 

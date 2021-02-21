@@ -95,4 +95,16 @@
         app:layout_constraintHorizontal_bias="0.141"
         app:layout_constraintStart_toEndOf="@+id/edt_actualizarnombre"
         app:layout_constraintTop_toBottomOf="@+id/edt_actualizar_nombrep" />
+
+    <ImageView
+        android:id="@+id/img_proveedor"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="@+id/edt_actualizar_nombrep"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/edt_actualizar_nombrep"
+        app:layout_constraintTop_toBottomOf="@+id/edt_actualizar_nombrep"
+        app:srcCompat="@drawable/farmaandroid" />
 </androidx.constraintlayout.widget.ConstraintLayout>

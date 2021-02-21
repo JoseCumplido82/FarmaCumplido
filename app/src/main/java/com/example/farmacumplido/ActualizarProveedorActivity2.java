@@ -2,9 +2,11 @@ package com.example.farmacumplido;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -20,13 +22,14 @@ public class  ActualizarProveedorActivity2 extends AppCompatActivity {
     Proveedor pseleccionado = null;
     EditText edt_actualizar_ipd = null;
     EditText edt_actualizar_nombrep = null;
-
+    ImageView img_proveedor =null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actualizar_proveedor2);
         edt_actualizar_ipd = (EditText) findViewById(R.id.edt_actualizar_idp);
         edt_actualizar_nombrep = (EditText) findViewById(R.id.edt_actualizar_nombrep);
+        img_proveedor = (ImageView)findViewById(R.id.img_proveedor);
         Intent intent = getIntent();
         if(intent != null)
         {
@@ -36,6 +39,12 @@ public class  ActualizarProveedorActivity2 extends AppCompatActivity {
                 edt_actualizar_ipd.setText(String.valueOf(pseleccionado.getIdproveedor()));
                 edt_actualizar_ipd.setEnabled(false);
                 edt_actualizar_nombrep.setText(pseleccionado.getNombreProveedor());
+
+                Bitmap fotobm= pseleccionado.getFoto();
+                if(fotobm!=null){
+                    img_proveedor.setImageBitmap(fotobm);
+                }
+
             }
         }
     }

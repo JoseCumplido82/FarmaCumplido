@@ -1,5 +1,6 @@
 package com.example.farmacumplido.clases;
 
+import android.graphics.Bitmap;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
@@ -11,12 +12,19 @@ public class Proveedor implements Serializable {
 
     private int idproveedor;
     private String nombreProveedor;
+    private Bitmap foto;
 
     //--------------------------
 
+    public Proveedor(int idproveedor, String nombreProveedor, Bitmap foto) {
+        this.idproveedor = idproveedor;
+        this.nombreProveedor = nombreProveedor;
+        this.foto = foto;
+    }
     public Proveedor(int idproveedor, String nombreProveedor) {
         this.idproveedor = idproveedor;
         this.nombreProveedor = nombreProveedor;
+        this.foto = null;
     }
     public  Proveedor(String nombreProveedor) {this.nombreProveedor = nombreProveedor;}
 
@@ -30,6 +38,14 @@ public class Proveedor implements Serializable {
 
     public String getNombreProveedor() {
         return nombreProveedor;
+    }
+
+    public Bitmap getFoto() {
+        return foto;
+    }
+
+    public void setFoto(Bitmap foto) {
+        this.foto = foto;
     }
 
     public void setNombreProveedor(String nombreProveedor) {
@@ -53,9 +69,6 @@ public class Proveedor implements Serializable {
 
     @Override
     public String toString() {
-        return "Proveedor{" +
-                "idproveedor=" + idproveedor +
-                ", nombreProveedor='" + nombreProveedor + '\'' +
-                '}';
+        return nombreProveedor;
     }
 }

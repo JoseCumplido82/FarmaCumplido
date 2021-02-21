@@ -24,6 +24,7 @@ public class listaMedicamentosAdapter extends RecyclerView.Adapter<MedicamentoVi
         mInflater = LayoutInflater.from(c);
     }
 
+
     public LayoutInflater getmInflater() {
         return mInflater;
     }
@@ -45,6 +46,22 @@ public class listaMedicamentosAdapter extends RecyclerView.Adapter<MedicamentoVi
         holder.txt_nombrem.setText("medicamento: " + medicamentoActual.getNombre());
         holder.txt_preciom.setText(String.valueOf("precio: " + medicamentoActual.getPrecio()));
         holder.txt_proveedorm.setText(String.valueOf("idproveedor: " + medicamentoActual.getIdproveedor()));
+        if(medicamentoActual.getFoto()!=null) {
+            holder.img_medicamento.setImageBitmap(medicamentoActual.getFoto());
+        }
+
+        //esto no hace falta
+        //if(this.listaFotosMedicamentos != null)
+       // {
+           // for(FotoMedicamento fc: this.listaFotosMedicamentos)
+           // {
+               // if(fc.getIdmedicamento()==medicamentoActual.getIdmedicamento())
+              //  {
+                  //  holder.img_medicamento.setImageBitmap(fc.getFoto());
+                   // break;
+               // }
+            //}
+        //}
     }
 
     @Override

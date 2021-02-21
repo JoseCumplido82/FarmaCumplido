@@ -1,9 +1,12 @@
 package com.example.farmacumplido.modelos;
 
+import android.graphics.Bitmap;
 import android.util.Log;
 
+import com.example.farmacumplido.Utilidades.ImagenesBlobBitmap;
 import com.example.farmacumplido.clases.Medicamento;
 
+import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,20 +27,18 @@ public class MedicamentoDB {
         ArrayList<Medicamento> medicamentosDevueltos = new ArrayList<Medicamento>();
         try {
             Statement sentencia = conexion.createStatement();
-            String ordenSQL = "SELECT * from medicamento";
+            String ordenSQL = "select me.idmedicamento, me.nombre, me.precio, me.idproveedor, ft.fotos as fotom from medicamento me inner join fotos_medicamentos ft on (me.idmedicamento=ft.idmedicamento);";
             ResultSet resultado = sentencia.executeQuery(ordenSQL);
             while(resultado.next())
             {
-
-                System.out.println("llega al resultado del while pero no coge los atributos del medicamento");
+               // System.out.println("llega al resultado del while pero no coge los atributos del medicamento");
                 int idmedicamento= resultado.getInt("idmedicamento");
-
                 String nombre = resultado.getString("nombre");
-
                 double precio= resultado.getDouble("precio");
-
                 int idproveedor= resultado.getInt("idproveedor");
-                Medicamento m = new Medicamento(idmedicamento, nombre, precio, idproveedor);
+                Blob foto= resultado.getBlob("fotom");
+               Bitmap fotobm= ImagenesBlobBitmap.blob_to_bitmap(foto, ImagenesBlobBitmap.ancho, ImagenesBlobBitmap.alto);
+                Medicamento m = new Medicamento(idmedicamento, nombre, precio, idproveedor, fotobm);
                 medicamentosDevueltos.add(m);
             }
             resultado.close();
@@ -167,6 +168,8 @@ public class MedicamentoDB {
             return null;
         }
     }
+
+
 
 
 //--------------------------------------------------------------

@@ -3,6 +3,7 @@ package com.example.farmacumplido.clases;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +20,8 @@ public class MedicamentoViewHolder extends RecyclerView.ViewHolder implements Vi
     public TextView txt_nombrem = null;
     public TextView txt_preciom = null;
     public TextView txt_proveedorm = null;
+    public ImageView img_medicamento=null;
+
     final listaMedicamentosAdapter lcAdapter;
 
     public MedicamentoViewHolder(@NonNull View itemView, listaMedicamentosAdapter mAdapter) {
@@ -26,6 +29,7 @@ public class MedicamentoViewHolder extends RecyclerView.ViewHolder implements Vi
         txt_nombrem = (TextView)  itemView.findViewById(R.id.txt_nombrem);
         txt_preciom = (TextView)  itemView.findViewById(R.id.txt_preciom);
         txt_proveedorm = (TextView)  itemView.findViewById(R.id.txt_proveedorm);
+        img_medicamento =(ImageView)  itemView.findViewById(R.id.img_medicamento);
         this.lcAdapter = mAdapter;
         itemView.setOnClickListener(this);
     }

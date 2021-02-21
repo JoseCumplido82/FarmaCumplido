@@ -30,19 +30,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nombre_medicamento"
+                android:textColor="#FFC107"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/txt_preciom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/precio" />
+                android:text="@string/precio"
+                android:textColor="#FFC107" />
 
             <TextView
                 android:id="@+id/txt_proveedorm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/proveedor" />
+                android:text="@string/proveedor"
+                android:textColor="#FFC107" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

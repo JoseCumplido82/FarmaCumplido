@@ -53,7 +53,6 @@ public class NuevoMedicamentosActivity extends AppCompatActivity implements Adap
     public void insertarMedicamento(View view) {
         AlertDialog.Builder alerta1 = new AlertDialog.Builder(this);
         alerta1.setTitle("quieres guardar el medicamento?");
-        //alerta1.setMessage(" no -> cancelar, si-> guardar");
         alerta1.setPositiveButton("si", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -62,23 +61,23 @@ public class NuevoMedicamentosActivity extends AppCompatActivity implements Adap
                     mostrarToast("selecciona un proveedor");
                     return;
                 }
-                Medicamento c = null;
+                Medicamento m = null;
                 try{
                     String nombre = String.valueOf(edt_nuevom_nombre.getText());
                     double precio = Double.valueOf(String.valueOf(edt_nuevom_precio.getText()));
-                    c = new Medicamento(nombre, precio, pseleccionado.getIdproveedor());
+                    m = new Medicamento(nombre, precio, pseleccionado.getIdproveedor());
 
                 }catch (Exception e)
                 {
                     mostrarToast("error, revisa los datos introducidos");
                 }
-                //insertar Ciudad
-                boolean insertadoOK = MedicamentoController.InsertarMedicamento(c);
+                //insertar medicamento
+                boolean insertadoOK = MedicamentoController.InsertarMedicamento(m);
                 if(insertadoOK)
                 {
                     mostrarToast("medicamento insertado correctamente");
                     Intent intent = new Intent();
-                    intent.putExtra(EXTRA_OBJETO_MEDICAMENTO, c);
+                    intent.putExtra(EXTRA_OBJETO_MEDICAMENTO, m);
                     setResult(RESULT_OK, intent);
                     finish();
                 }

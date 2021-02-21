@@ -2,12 +2,11 @@ package com.example.farmacumplido;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.content.DialogInterface;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,9 +37,6 @@ public class MostrarMedicamentosActivity1 extends AppCompatActivity {
         //fotosMedicamentos= FotoMedicamentoController.obtenerFotosMedicamentos();
         //System.out.println(medicamentos.size());
         if(medicamentos != null) {
-
-            //-------------------------------------------------------
-            // Get a handle to the RecyclerView.
             rv_medicamentos = (RecyclerView) findViewById(R.id.rv_medicamentos);
             // Create an adapter and supply the data to be displayed.
             mAdapter = new listaMedicamentosAdapter(this, medicamentos); //hay que añadir fotosMedicamentos para que se vea la nueva foto
