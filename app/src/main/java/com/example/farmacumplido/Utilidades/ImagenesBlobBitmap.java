@@ -39,7 +39,7 @@ public class ImagenesBlobBitmap {
     //método que convierte byte[] a bitmap
     public static Bitmap bytes_to_bitmap(byte[] b){
         Bitmap.Config config = Bitmap.Config.ARGB_8888;
-        Bitmap bitmap = Bitmap.createBitmap(200, 200,config);
+        Bitmap bitmap = Bitmap.createBitmap(alto, ancho,config);
         try{
             bitmap = BitmapFactory.decodeByteArray(b, 0, b.length);
         } catch (Exception e){

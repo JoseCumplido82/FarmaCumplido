@@ -8,14 +8,16 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.farmacumplido.Utilidades.ImagenesBlobBitmap;
 import com.example.farmacumplido.clases.Medicamento;
+import com.example.farmacumplido.clases.MedicamentoViewHolder;
 
 public class MostrarDetalleMedicamentoctivity extends AppCompatActivity {
 
     TextView txt_detalle_nombrem = null;
     TextView txt_detalle_precio = null;
     TextView txt_detalle_idproveedor = null;
-    ImageView img_detalle_medicamento=null;
+    ImageView img_detalle_medicamento= null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +33,11 @@ public class MostrarDetalleMedicamentoctivity extends AppCompatActivity {
             txt_detalle_nombrem.setText(c.getNombre());
             txt_detalle_precio.setText("precio: " + String.valueOf(c.getPrecio()));
             txt_detalle_idproveedor.setText("idproveedor: " + String.valueOf(c.getIdproveedor()));
+            byte[] byteArray  = intent.getByteArrayExtra(MedicamentoViewHolder.EXTRA_IMAGEN_MEDICAMENTO);
+            if(byteArray!=null) {
+                //FALLO AQUI
+               //img_detalle_medicamento.setImageBitmap(ImagenesBlobBitmap.bytes_to_bitmap(byteArray));
+            }
         }
     }
 }

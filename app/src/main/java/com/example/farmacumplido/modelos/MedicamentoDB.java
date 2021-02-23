@@ -27,7 +27,7 @@ public class MedicamentoDB {
         ArrayList<Medicamento> medicamentosDevueltos = new ArrayList<Medicamento>();
         try {
             Statement sentencia = conexion.createStatement();
-            String ordenSQL = "select me.idmedicamento, me.nombre, me.precio, me.idproveedor, ft.fotos as fotom from medicamento me inner join fotos_medicamentos ft on (me.idmedicamento=ft.idmedicamento);";
+            String ordenSQL = "select me.idmedicamento, me.nombre, me.precio, me.idproveedor, ft.foto as fotom from medicamento me left join fotomedicamento ft on (me.idmedicamento=ft.idmedicamento);";
             ResultSet resultado = sentencia.executeQuery(ordenSQL);
             while(resultado.next())
             {
