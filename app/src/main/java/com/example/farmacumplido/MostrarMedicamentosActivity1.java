@@ -64,17 +64,20 @@ public class MostrarMedicamentosActivity1 extends AppCompatActivity {
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 if(direction == ItemTouchHelper.LEFT)
                 {
-                    mostrarToast("ha pulsado izquierda");
-                    // Medicamento c = medicamentos.get(viewHolder.getAdapterPosition());
-                    // MedicamentoController.borrarMedicamento(c);
+                    mostrarToast("has eliminado el medicamento");
+                    Medicamento c = medicamentos.get(viewHolder.getAdapterPosition());
+                    MedicamentoController.borrarMedicamento(c);
                     medicamentos.remove(viewHolder.getAdapterPosition());
                     mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
                 }
                 if(direction == ItemTouchHelper.RIGHT)
                 {
                     mostrarToast("ha pulsado derecha");
+
+
                     medicamentos.remove(viewHolder.getAdapterPosition());
                     mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+
                 }
             }
         });

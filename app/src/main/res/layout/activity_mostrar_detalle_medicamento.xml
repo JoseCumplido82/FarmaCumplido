@@ -7,7 +7,7 @@
     android:background="#6B7CA6">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imagenMedicamento2"
         android:layout_width="180dp"
         android:layout_height="148dp"
         android:layout_marginTop="80dp"
@@ -28,9 +28,9 @@
         android:textColor="#FFC107"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/imagenMedicamento2"
+        app:layout_constraintStart_toStartOf="@+id/imagenMedicamento2"
+        app:layout_constraintTop_toBottomOf="@+id/imagenMedicamento2" />
 
     <TextView
         android:id="@+id/txt_detalle_precio"

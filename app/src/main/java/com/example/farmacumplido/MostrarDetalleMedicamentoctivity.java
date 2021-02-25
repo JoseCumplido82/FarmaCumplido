@@ -25,18 +25,19 @@ public class MostrarDetalleMedicamentoctivity extends AppCompatActivity {
         txt_detalle_nombrem = findViewById(R.id.txt_detalle_nombrem);
         txt_detalle_precio = findViewById(R.id.txt_detalle_precio);
         txt_detalle_idproveedor = findViewById(R.id.txt_detalle_idproveedor);
-        img_detalle_medicamento = findViewById(R.id.img_medicamento);
+        img_detalle_medicamento = findViewById(R.id.imagenMedicamento2);
         Intent intent = getIntent();
         if(intent != null)
         {
             Medicamento c = (Medicamento) intent.getSerializableExtra(NuevoMedicamentosActivity.EXTRA_OBJETO_MEDICAMENTO);
             txt_detalle_nombrem.setText(c.getNombre());
-            txt_detalle_precio.setText("precio: " + String.valueOf(c.getPrecio()));
+            txt_detalle_precio.setText("precio: " + String.valueOf(c.getPrecio()) + " €");
             txt_detalle_idproveedor.setText("idproveedor: " + String.valueOf(c.getIdproveedor()));
             byte[] byteArray  = intent.getByteArrayExtra(MedicamentoViewHolder.EXTRA_IMAGEN_MEDICAMENTO);
             if(byteArray!=null) {
                 //FALLO AQUI
-               //img_detalle_medicamento.setImageBitmap(ImagenesBlobBitmap.bytes_to_bitmap(byteArray));
+               img_detalle_medicamento.setImageBitmap(ImagenesBlobBitmap.bytes_to_bitmap(byteArray));
+
             }
         }
     }
