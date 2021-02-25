@@ -33,4 +33,6 @@
     <string name="todo2">TODO</string>
     <string name="item_proveedor">item proveedor</string>
     <string name="todo3">TODO</string>
+    <string name="mostrar_farmacia">MOSTRAR FARMACIA</string>
+    <string name="farmacumplido">FarmaCumplido</string>
 </resources>

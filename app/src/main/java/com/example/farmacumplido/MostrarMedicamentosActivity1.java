@@ -72,9 +72,7 @@ public class MostrarMedicamentosActivity1 extends AppCompatActivity {
                 }
                 if(direction == ItemTouchHelper.RIGHT)
                 {
-                    mostrarToast("ha pulsado derecha");
-
-
+                    mostrarToast("ha pulsado derecha, medicamento oculto, si quiere eliminar pulse izquierda");
                     medicamentos.remove(viewHolder.getAdapterPosition());
                     mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
 
